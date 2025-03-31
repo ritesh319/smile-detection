@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile to Take a Selfie</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        #video-container {
+            margin: auto;
+            width: 640px;
+            height: 480px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>😊 Smile to Take a Selfie! 😊</h1>
+    <div id="video-container">
+        <img src="{{ url_for('video_feed') }}" width="640" height="480">
+    </div>
+    <h2>Last Captured Selfie:</h2>
+    <img id="selfie_img" src="{{ url_for('static', filename='selfie.jpg') }}" width="320">
+
+</body>
+</html>
